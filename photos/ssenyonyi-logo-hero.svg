@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" role="img" aria-labelledby="title desc">
+  <title id="title">SSENYONYI GRACELINE Construction Limited</title>
+  <desc id="desc">White and gold hero logo for SSENYONYI GRACELINE Construction Limited.</desc>
+  <defs>
+    <style>
+      .white{fill:#fff}
+      .gold{fill:#c58a28}
+      .roof{fill:#2b261f}
+      .line{stroke:#fff;stroke-width:5;stroke-linecap:round}
+      .thin{stroke:#fff;stroke-width:4;stroke-linecap:round}
+      text{font-family:Arial,Helvetica,sans-serif}
+    </style>
+  </defs>
+  <g transform="translate(150 10) scale(.78)">
+    <path class="white" d="M70 86V28c0-6 3-10 8-13l43-26v96l-35 23c-9 6-16 0-16-10Z"/>
+    <path class="white" d="M18 126V62c0-7 3-11 9-15l36-21c9-5 28 9 31 24 2 11 0 45 0 64l-42 25V80c0-6-9-6-9 0v69l-11 7V86c0-6-9-6-9 0v75l-5 3Z"/>
+    <path class="roof" d="M4 176 120 86c8-6 15-6 23 1l114 94c-19 2-34 1-45-2l-77-63c-7-6-13-6-21-1l-64 55c-12 9-27 8-46 6Z"/>
+    <path class="gold" d="M210 179c26 4 49 5 69 3l-101-78c-6 5-16 9-29 12Z"/>
+    <path class="gold" d="M232 36c0-7 6-13 13-13s13 6 13 13v40c0 5 4 9 9 9h36c7 0 13 6 13 13s-6 13-13 13h-36c-5 0-9 4-9 9v42c0 7-6 13-13 13s-13-6-13-13v-42c0-5-4-9-9-9h-36c-7 0-13-6-13-13s6-13 13-13h36c5 0 9-4 9-9Z"/>
+    <rect class="white" x="121" y="144" width="23" height="23" rx="6"/>
+    <rect class="white" x="153" y="144" width="23" height="23" rx="6"/>
+    <rect class="white" x="121" y="176" width="23" height="23" rx="6"/>
+    <rect class="white" x="153" y="176" width="23" height="23" rx="6"/>
+  </g>
+  <text x="260" y="255" text-anchor="middle" class="white" font-size="70" font-weight="900" letter-spacing="1">SSENYONYI</text>
+  <text x="260" y="320" text-anchor="middle" class="gold" font-size="70" font-weight="900" letter-spacing="1">GRACELINE</text>
+  <line class="line" x1="76" y1="345" x2="134" y2="345"/>
+  <text x="260" y="354" text-anchor="middle" class="white" font-size="30" font-style="italic" font-weight="900">CONSTRUCTION LIMITED</text>
+  <line class="line" x1="386" y1="345" x2="444" y2="345"/>
+  <line class="thin" x1="80" y1="382" x2="132" y2="382"/>
+  <text x="260" y="390" text-anchor="middle" class="white" font-size="28" font-style="italic" font-weight="700">Engineering Faith Into Reality</text>
+  <line class="thin" x1="388" y1="382" x2="440" y2="382"/>
+  <rect x="190" y="405" width="140" height="34" rx="8" fill="none" stroke="#c58a28" stroke-width="4"/>
+  <text x="260" y="431" text-anchor="middle" class="white" font-size="28" font-weight="900" letter-spacing="3">GEN 1:26</text>
+</svg>
