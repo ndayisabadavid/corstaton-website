@@ -7,20 +7,27 @@
   <title>SSENYONYI GRACELINE Construction Ltd | Electrical Systems & Installation</title>
   <style>
     :root {
-      --ink: #101820;
+      --ink: #0d1720;
       --ink-2: #172430;
-      --steel: #52606d;
-      --gold: #d6a237;
-      --gold-dark: #a97416;
-      --paper: #f7f3ec;
+      --steel: #54616d;
+      --gold: #d7a843;
+      --gold-dark: #9b6c18;
+      --paper: #f4f0e8;
+      --mist: #eef3f4;
       --white: #ffffff;
       --line: rgba(16, 24, 32, 0.12);
-      --shadow: 0 24px 70px rgba(16, 24, 32, 0.16);
+      --shadow: 0 22px 56px rgba(16, 24, 32, 0.14);
+      --shadow-soft: 0 12px 32px rgba(16, 24, 32, 0.08);
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    * { min-width: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 104px;
+    }
 
     body {
       margin: 0;
@@ -29,16 +36,23 @@
       font-family: Inter, "Segoe UI", Arial, sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     img, video { display: block; max-width: 100%; }
 
     a { color: inherit; text-decoration: none; }
 
+    h1, h2, h3, p, a, span, strong {
+      overflow-wrap: break-word;
+    }
+
     button, input, textarea { font: inherit; }
 
     .section {
       padding: clamp(72px, 9vw, 124px) clamp(18px, 5vw, 72px);
+      scroll-margin-top: 104px;
     }
 
     .container {
@@ -47,23 +61,25 @@
     }
 
     .topbar {
-      position: absolute;
+      position: fixed;
       inset: 0 0 auto;
       z-index: 50;
       display: grid;
-      grid-template-columns: minmax(230px, 330px) minmax(0, 1fr);
-      align-items: start;
-      gap: clamp(24px, 4vw, 76px);
-      padding: clamp(24px, 3vw, 38px) clamp(24px, 5vw, 88px) 0;
+      grid-template-columns: minmax(132px, 180px) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(18px, 3vw, 48px);
+      padding: 14px clamp(20px, 5vw, 72px);
       color: var(--white);
-      background: transparent;
-      border-bottom: 0;
+      background: linear-gradient(180deg, rgba(7, 20, 32, 0.92), rgba(7, 20, 32, 0.68));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(18px);
     }
 
     .brand {
       display: block;
-      justify-self: center;
-      width: clamp(168px, 11vw, 218px);
+      justify-self: start;
+      width: clamp(112px, 9vw, 150px);
       color: var(--white);
       opacity: 0;
       animation: fadeUp 900ms 120ms cubic-bezier(.2,.75,.22,1) forwards;
@@ -94,19 +110,18 @@
       align-items: center;
       justify-content: center;
       justify-self: center;
-      gap: clamp(20px, 3vw, 48px);
-      min-height: 78px;
+      gap: clamp(12px, 2vw, 34px);
+      min-height: 58px;
       width: min(1240px, 100%);
       margin-left: 0;
-      padding: 0 clamp(22px, 3vw, 46px);
+      padding: 0 clamp(14px, 2.4vw, 30px);
       color: rgba(255, 255, 255, 0.84);
-      font-size: clamp(0.98rem, 1.15vw, 1.16rem);
+      font-size: clamp(0.88rem, 0.95vw, 1rem);
       font-weight: 700;
       border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(12, 31, 47, 0.72), rgba(12, 31, 47, 0.46));
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255,255,255,0.08);
-      backdrop-filter: blur(22px);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
       opacity: 0;
       animation: fadeUp 900ms 220ms cubic-bezier(.2,.75,.22,1) forwards;
     }
@@ -127,7 +142,7 @@
 
     .nav-cta {
       margin-left: auto;
-      padding: 13px 24px !important;
+      padding: 12px 20px !important;
       border: 1px solid rgba(214, 162, 55, 0.82);
       border-radius: 8px;
       color: #e8c36f;
@@ -202,14 +217,13 @@
 
     .hero {
       position: relative;
-      min-height: 92svh;
+      min-height: 96svh;
       display: grid;
       align-items: center;
       isolation: isolate;
       color: var(--white);
       background: var(--ink);
       overflow: hidden;
-      user-select: none;
     }
 
     .hero::before {
@@ -265,10 +279,10 @@
 
     .hero-inner {
       width: auto;
-      max-width: 920px;
-      margin-left: clamp(50px, 8.7vw, 178px);
+      max-width: 980px;
+      margin-left: clamp(34px, 8vw, 150px);
       margin-right: clamp(18px, 5vw, 80px);
-      padding: clamp(220px, 30vh, 310px) 0 clamp(70px, 9vh, 96px);
+      padding: clamp(190px, 27vh, 280px) 0 clamp(74px, 10vh, 108px);
       opacity: 0;
       animation: fadeUp 1000ms 360ms cubic-bezier(.2,.75,.22,1) forwards;
     }
@@ -303,9 +317,9 @@
 
     h1 {
       max-width: 840px;
-      margin-bottom: 28px;
-      font-size: clamp(4.15rem, 6.25vw, 6.9rem);
-      line-height: 1;
+      margin-bottom: 24px;
+      font-size: clamp(3.25rem, 5.6vw, 5.9rem);
+      line-height: 0.98;
       letter-spacing: 0;
       text-wrap: balance;
     }
@@ -314,10 +328,10 @@
 
     .hero-lede {
       max-width: 740px;
-      margin-bottom: 40px;
+      margin-bottom: 34px;
       color: rgba(255, 255, 255, 0.8);
-      font-size: clamp(1.25rem, 1.75vw, 1.58rem);
-      line-height: 1.72;
+      font-size: clamp(1.12rem, 1.45vw, 1.34rem);
+      line-height: 1.68;
     }
 
     .hero-lede mark {
@@ -361,6 +375,36 @@
       min-height: 58px;
     }
 
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 720px;
+      margin-top: 34px;
+    }
+
+    .hero-stat {
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #f5d889;
+      font-size: 1.4rem;
+      line-height: 1.1;
+    }
+
+    .hero-stat span {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
     .section-head {
       display: grid;
       grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.42fr);
@@ -379,8 +423,8 @@
 
     h2 {
       margin-bottom: 0;
-      font-size: clamp(2.1rem, 4.6vw, 4.65rem);
-      line-height: 1;
+      font-size: clamp(2rem, 4.1vw, 4.15rem);
+      line-height: 1.04;
       letter-spacing: 0;
       text-wrap: balance;
     }
@@ -389,6 +433,11 @@
     .lede {
       color: var(--steel);
       font-size: 1.02rem;
+    }
+
+    .section-head p {
+      max-width: 440px;
+      margin-bottom: 0;
     }
 
     .services {
@@ -402,14 +451,21 @@
     }
 
     .service-card {
-      min-height: 430px;
+      min-height: 410px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--white);
-      box-shadow: 0 14px 40px rgba(16, 24, 32, 0.08);
+      box-shadow: var(--shadow-soft);
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214, 168, 67, 0.36);
+      box-shadow: var(--shadow);
     }
 
     .service-card img {
@@ -442,7 +498,9 @@
 
     .about {
       color: var(--white);
-      background: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(215, 168, 67, 0.08), transparent 36%),
+        var(--ink);
     }
 
     .about-grid {
@@ -512,6 +570,35 @@
       background: var(--paper);
     }
 
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .trust-item {
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .trust-item span {
+      color: var(--steel);
+      font-size: 0.92rem;
+    }
+
     .project-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -576,7 +663,9 @@
 
     .video-section {
       color: var(--white);
-      background: #172430;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), transparent 32%),
+        #172430;
     }
 
     .video-section .section-head p { color: rgba(255, 255, 255, 0.72); }
@@ -653,6 +742,19 @@
       border-radius: 8px;
       font-size: 0.8rem;
       font-weight: 800;
+    }
+
+    .gallery-grid figure::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 45%;
+      background: linear-gradient(180deg, transparent, rgba(13, 23, 32, 0.72));
+      pointer-events: none;
+    }
+
+    .gallery-grid figcaption {
+      z-index: 1;
     }
 
     .wide { grid-column: span 2; }
@@ -773,6 +875,10 @@
 
     .contact-card p { margin-bottom: 0; color: rgba(255, 255, 255, 0.82); }
 
+    .contact-card a {
+      overflow-wrap: anywhere;
+    }
+
     .contact-form {
       display: grid;
       gap: 12px;
@@ -780,6 +886,7 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
     }
 
     .contact-form input,
@@ -824,6 +931,10 @@
       display: flex;
       align-items: center;
       gap: 14px;
+    }
+
+    .footer-mark strong {
+      line-height: 1.25;
     }
 
     .footer-mark img {
@@ -896,7 +1007,7 @@
 
       .brand {
         justify-self: start;
-        width: 92px;
+        width: 82px;
       }
 
       .brand-logo {
@@ -907,7 +1018,7 @@
 
       .nav {
         position: absolute;
-        top: 82px;
+        top: calc(100% + 10px);
         left: 18px;
         right: 18px;
         display: none;
@@ -918,11 +1029,17 @@
         border-radius: 8px;
         background: rgba(16, 24, 32, 0.96);
         box-shadow: var(--shadow);
+        max-height: calc(100svh - 112px);
+        overflow: auto;
       }
 
       .nav.is-open {
         display: grid;
         gap: 10px;
+      }
+
+      .nav a {
+        padding: 12px 0;
       }
 
       .nav-cta {
@@ -938,37 +1055,123 @@
       .service-grid,
       .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trust-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .photo-stack { min-height: 470px; }
     }
 
     @media (max-width: 640px) {
-      .topbar { padding: 14px 16px; }
-      .brand { width: 82px; }
+      html { scroll-padding-top: 88px; }
+      .section {
+        padding: 56px 16px;
+        scroll-margin-top: 88px;
+      }
+      .topbar { padding: 12px 16px; }
+      .brand { width: 72px; }
       .hero::before { width: 100%; opacity: 0.42; }
+      .hero { min-height: auto; }
       .hero-inner {
         max-width: none;
         margin: 0 18px;
-        padding: 138px 0 62px;
+        padding: 126px 0 54px;
       }
+      .hero-media img { object-position: center top; }
       .hero .eyebrow { display: none; }
-      h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+      h1 {
+        margin-bottom: 18px;
+        font-size: clamp(2.45rem, 12vw, 3.45rem);
+        line-height: 1.02;
+      }
+      h2 {
+        font-size: clamp(1.78rem, 9vw, 2.45rem);
+        line-height: 1.08;
+      }
       .hero-lede { font-size: 1rem; line-height: 1.65; }
       .hero-actions { gap: 12px; }
       .hero-actions .btn { min-width: 0; width: 100%; }
+      .scroll-cue { display: none; }
+      .hero-stats { grid-template-columns: 1fr; margin-top: 24px; }
+      .hero-stat { padding: 14px 16px; }
+      .section-head {
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+      .label { font-size: 0.72rem; }
       .service-grid,
       .video-grid,
       .process-grid,
       .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-auto-rows: 240px; }
+      .trust-strip { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; }
+      .service-card img { height: 190px; }
+      .service-body { padding: 20px; }
+      .gallery-grid { grid-auto-rows: 210px; }
       .wide, .tall { grid-column: span 1; grid-row: span 1; }
       .about-points { grid-template-columns: 1fr; }
+      .photo-stack {
+        display: grid;
+        gap: 12px;
+        min-height: 0;
+      }
+      .photo-stack figure {
+        position: relative;
+        inset: auto;
+      }
+      .stack-main,
+      .stack-small {
+        width: 100%;
+        height: auto;
+      }
+      .stack-main { aspect-ratio: 4 / 3; }
+      .stack-small { aspect-ratio: 16 / 10; }
+      .project-feature img { height: 260px; }
+      .project-copy { padding: 20px; }
       .project-item { grid-template-columns: 1fr; }
-      .project-item img { width: 100%; height: 210px; }
-      .photo-stack { min-height: 390px; }
-      .stack-main { inset: 0 0 100px 0; }
-      .stack-small { width: 66%; height: 190px; }
+      .project-item img { width: 100%; height: 190px; }
+      .video-card video { aspect-ratio: 16 / 10; }
+      .process-step {
+        min-height: 0;
+        padding: 20px;
+      }
+      .process-step::before { margin-bottom: 18px; }
+      .cta-box { padding: 40px 0; }
+      .contact-form { padding: 18px; }
       .footer-inner { display: grid; }
+      .footer-mark { align-items: flex-start; }
+      .whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-inner { margin: 0 14px; }
+      h1 { font-size: 2.28rem; }
+      h2 { font-size: 1.66rem; }
+      .btn {
+        min-height: 46px;
+        padding: 0 14px;
+        font-size: 0.82rem;
+      }
+      .trust-item,
+      .contact-card,
+      .point {
+        padding: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
@@ -981,9 +1184,10 @@
     </a>
     <nav class="nav" id="site-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#electrical">Electrical</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="#contact">Get Consultation</a>
@@ -1008,6 +1212,11 @@
               <a class="btn btn-primary" href="#projects">Our Projects</a>
               <a class="btn btn-light" href="#contact">Contact Us</a>
             </div>
+            <div class="hero-stats" aria-label="Company strengths">
+              <div class="hero-stat"><strong>01</strong><span>Electrical systems and installation</span></div>
+              <div class="hero-stat"><strong>02</strong><span>Construction and site execution</span></div>
+              <div class="hero-stat"><strong>03</strong><span>Planning, supervision, and handover</span></div>
+            </div>
           </div>
         </div>
         <span class="scroll-cue" aria-hidden="true"></span>
@@ -1019,9 +1228,9 @@
         <div class="section-head">
           <div>
             <div class="label">What We Do</div>
-            <h2>Complete site services with <span>technical discipline.</span></h2>
+            <h2>Built for dependable <span>site delivery.</span></h2>
           </div>
-          <p>From first consultation to final handover, the team brings planning, site discipline, and practical technical skill to every project.</p>
+          <p>From consultation to handover, the team brings planning, site discipline, and practical technical skill to every project.</p>
         </div>
         <div class="service-grid">
           <article class="service-card">
@@ -1101,9 +1310,15 @@
         <div class="section-head">
           <div>
             <div class="label">Project Proof</div>
-            <h2>Work that feels real because <span>it is real.</span></h2>
+            <h2>Real project work, shown with <span>clarity.</span></h2>
           </div>
           <p>Every strong project has visible progress: preparation, materials, structure, supervision, and a finished result that lasts.</p>
+        </div>
+        <div class="trust-strip" aria-label="Project delivery standards">
+          <div class="trust-item"><strong>Site Planning</strong><span>Clear scope, budget priorities, and material coordination.</span></div>
+          <div class="trust-item"><strong>Technical Care</strong><span>Electrical and construction details handled with supervision.</span></div>
+          <div class="trust-item"><strong>Quality Control</strong><span>Progress checks from foundation through finishing.</span></div>
+          <div class="trust-item"><strong>Client Updates</strong><span>Communication that keeps decisions moving.</span></div>
         </div>
         <div class="project-grid">
           <article class="project-feature">
@@ -1137,17 +1352,17 @@
         <div class="section-head">
           <div>
             <div class="label">Electrical Systems & Installation</div>
-            <h2>Technical work shown through <span>real video.</span></h2>
+            <h2>Electrical work with <span>practical field proof.</span></h2>
           </div>
           <p>Electrical and technical works are shown through real field clips, giving clients a clearer sense of our hands-on capability.</p>
         </div>
         <div class="video-grid">
-          <article class="video-card"><video src="video/video 1.mp4" autoplay muted loop playsinline controls></video><div><strong>Installation Support</strong><p>Electrical and technical site activity captured from real work.</p></div></article>
-          <article class="video-card"><video src="video/video 2.mp4" autoplay muted loop playsinline controls></video><div><strong>Power Works</strong><p>Hands-on installation progress with professional site coordination.</p></div></article>
-          <article class="video-card"><video src="video/video 3.mp4" autoplay muted loop playsinline controls></video><div><strong>Technical Delivery</strong><p>Electrical systems require careful planning, safety, and execution.</p></div></article>
-          <article class="video-card"><video src="video/video 4.mp4" autoplay muted loop playsinline controls></video><div><strong>Site Coordination</strong><p>Coordinated work keeps electrical installation aligned with project needs.</p></div></article>
-          <article class="video-card"><video src="video/video 5.mp4" autoplay muted loop playsinline controls></video><div><strong>Field Work</strong><p>Practical site activity handled with focus, coordination, and care.</p></div></article>
-          <article class="video-card"><video src="video/video 6.mp4" autoplay muted loop playsinline controls></video><div><strong>Electrical Systems</strong><p>Technical work planned for reliability, safety, and long-term performance.</p></div></article>
+          <article class="video-card"><video src="video/video 1.mp4" controls preload="metadata" playsinline></video><div><strong>Installation Support</strong><p>Electrical and technical site activity captured from real work.</p></div></article>
+          <article class="video-card"><video src="video/video 2.mp4" controls preload="metadata" playsinline></video><div><strong>Power Works</strong><p>Hands-on installation progress with professional site coordination.</p></div></article>
+          <article class="video-card"><video src="video/video 3.mp4" controls preload="metadata" playsinline></video><div><strong>Technical Delivery</strong><p>Electrical systems require careful planning, safety, and execution.</p></div></article>
+          <article class="video-card"><video src="video/video 4.mp4" controls preload="metadata" playsinline></video><div><strong>Site Coordination</strong><p>Coordinated work keeps electrical installation aligned with project needs.</p></div></article>
+          <article class="video-card"><video src="video/video 5.mp4" controls preload="metadata" playsinline></video><div><strong>Field Work</strong><p>Practical site activity handled with focus, coordination, and care.</p></div></article>
+          <article class="video-card"><video src="video/video 6.mp4" controls preload="metadata" playsinline></video><div><strong>Electrical Systems</strong><p>Technical work planned for reliability, safety, and long-term performance.</p></div></article>
         </div>
       </div>
     </section>
@@ -1157,7 +1372,7 @@
         <div class="section-head">
           <div>
             <div class="label">Gallery</div>
-            <h2>A sharper portfolio of <span>site moments.</span></h2>
+            <h2>A focused portfolio of <span>site progress.</span></h2>
           </div>
           <p>A closer look at foundations, structural works, roofing, finishing, supervision, and completed building results.</p>
         </div>
@@ -1180,7 +1395,7 @@
         <div class="section-head">
           <div>
             <div class="label">How We Work</div>
-            <h2>A clear process from idea to <span>handover.</span></h2>
+            <h2>A practical process from idea to <span>handover.</span></h2>
           </div>
           <p>A clear workflow keeps each client informed from the first conversation to the final project review.</p>
         </div>
